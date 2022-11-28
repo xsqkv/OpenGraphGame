@@ -4,11 +4,12 @@
         <script type="text/javascript" src="script.js"></script>
         <title>Graph Game</title>
     </head>
-    <body>  
-        <h1 class="label">Попробуй повторить граф!</h2>
+    <body onload="draw()">  
+        <h1 class="label">Попробуй повторить граф!</h1>
+        <h1 class="lvl">LVL 1</h1>
         <canvas id="canvas" class="actualGraph"></canvas>
         <canvas class="expectedGraph"></canvas>
-        <h3 class="xlabel">X =</h3>
+        <h3 class="ylabel">Y =</h3>
         <div class="manual">
             <p>
                 Математические операции: + - / *<br>
@@ -21,9 +22,9 @@
             </p>
         </div>
         <div class="divv">
-            <input class="textbox" placeholder="Введите формулу" type="text" pattern="[0-9-+/*%<>&|^]" title="Three letter country code"/>
+            <input id="exprsn" class="textbox" placeholder="Введите формулу" value="x"/>
             </p>
-            <button class="btn">Пуск</button>
+            <button class="btn" onclick="draw()">Пуск</button>
         </div>
     </body>
 </html>
