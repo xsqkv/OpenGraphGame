@@ -1,11 +1,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="script.js"></script>
         <title>Graph Game</title>
     </head>
     <body>  
         <h1 class="label">Попробуй повторить граф!</h2>
-        <canvas class="actualGraph"></canvas>
+        <canvas id="canvas" class="actualGraph"></canvas>
         <canvas class="expectedGraph"></canvas>
         <h3 class="xlabel">X =</h3>
         <div class="manual">
@@ -19,6 +20,10 @@
                 Побитовое ИСКЛЮЧАЮЩЕЕ ИЛИ: ^
             </p>
         </div>
-        <div class="divv"><input class="textbox" placeholder="Введите формулу"/></div>
+        <div class="divv">
+            <input class="textbox" placeholder="Введите формулу" type="text" pattern="[0-9-+/*%<>&|^]" title="Three letter country code"/>
+            </p>
+            <button class="btn">Пуск</button>
+        </div>
     </body>
 </html>
