@@ -6,18 +6,18 @@
 .label
 {
     font-family: FOND;
-    color: #e6c7a5;
+    color: #dab642;
     text-align: center;
+    position: absolute;
+    top: 120;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 body
 {
-    background-color: 222222;
-}
-.main 
-{
-    width: 95vw;
-    height: 95vh;
-    position: relative;
+    background-color: #1b1917;
 }
 .actualGraph 
 {
@@ -27,7 +27,7 @@ body
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    right: 410;
     bottom: 0;
     margin: auto;
 }
@@ -38,8 +38,47 @@ body
     height: 400px;
     position: absolute;
     top: 0;
+    left: 410;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.divv
+{
+    text-align:center;
+    position: absolute;
+    top: 700;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+}
+.xlabel
+{
+    font-family: FOND;
+    font-size: 24;
+    color: #f5f5f5;    
+    position: absolute;
+    top: 700;
+    left: 780;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.manual
+{
+    font-family: FOND;
+    font-size: 14;
+    color: hsl(30, 8%, 40%);
+    position: absolute;
+    top: 750;
+    left: 780;
+    margin: auto;
+}
+.textbox
+{ 
+    font-family: FOND;
+    font-size: 18px;
+    width: 260px;
+    height: 30px;
 }
