@@ -4,26 +4,56 @@
         <script type="text/javascript" src="script.js"></script>
         <title>Graph Game</title>
     </head>
-    <body onload="draw()">  
+    <body onload="draw();draw();">  
         <h1 class="label">Попробуй повторить граф!</h1>
         <h1 class="lvl">LVL 1</h1>
         <canvas id="canvas" class="actualGraph"></canvas>
-        <canvas class="expectedGraph"></canvas>
+        <canvas id="excepted" class="expectedGraph"></canvas>
         <h3 class="ylabel">Y =</h3>
         <div class="divv">
-            <input id="exprsn" class="textbox" placeholder="Введите формулу" value="x"/>
+            <input id="exprsn" class="textbox" placeholder="Введите формулу" value=""/>
             </p>
             <button class="btn" onclick="draw()">Пуск</button>
         </div>
         <div class="manual">
             <p>
-                Математические операции: + - / *<br>
-                Возведение в степень: **<br>
-                Остаток от деления: %<br>
-                Побитовый сдвиг: << >><br>
-                Побитовое И: &<br>
-                Побитовое ИЛИ: |<br>
-                Побитовое ИСКЛЮЧАЮЩЕЕ ИЛИ: ^
+                Математические операции: + - / *     <br>
+                Возведение в степень: x**n           <br>
+                Остаток от деления: x%y              <br>
+                Побитовый сдвиг: x<< n,x>>n          <br>
+                Побитовое И: x&y                     <br>
+                Побитовое ИЛИ: x|y                   <br>
+                Побитовое ИСКЛЮЧАЮЩЕЕ ИЛИ: x^y             
+            </p>
+        </div>
+        <div class="manualFunc">
+            <p>
+                Математические функции:<br>
+                abs(x)
+                 acos(x)
+                 acosh(x)<br>
+                asin(x)
+                 asinh(x)
+                 atan(x)<br>
+                atan2(x,n)
+                 atanh(x)
+                 cos(x)<br>
+                cosh(x)
+                 exp(x)
+                 log(x)<br>
+                random(x)
+                 sin(x)
+                 sinh(x)<br>
+                sqrt(x)
+                 tan(x)
+                 tanh(x)
+            </p>
+        </div>
+        <div class="manualConst">
+            <p>
+                Константы:<br>
+                PI<br>
+                E<br>
             </p>
         </div>
     </body>

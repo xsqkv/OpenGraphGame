@@ -101,3 +101,23 @@ body
     left: calc(50% - 405px);
     margin: auto;
 }
+.manualConst
+{
+    font-family: FOND;
+    font-size: 14;
+    color: hsl(30, 8%, 40%);
+    position: absolute;
+    top: calc(50% + 315px);
+    left: calc(50% - 80px);
+    margin: auto;
+}
+.manualFunc
+{
+    font-family: FOND;
+    font-size: 14;
+    color: hsl(30, 8%, 40%);
+    position: absolute;
+    top: calc(50% + 315px);
+    left: calc(50% + 200px);
+    margin: auto;
+}
