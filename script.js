@@ -18,6 +18,38 @@ function tan    (x)   { return Math.tan      (x)   }
 function tanh   (x)   { return Math.tanh     (x)   }
 
 var PI = Math.PI;
+var E = Math.E;
+
+const img = new Image();   // Create new img element
+img.src = 'img/1.png';
+
+function drawExc()
+{
+    var ectx = document.getElementById("excepted").getContext("2d");
+    ectx.drawImage(img, 0, 0,ectx.canvas.width,ectx.canvas.height);    
+}
+
+function Hash(string) 
+{
+    var tmp = string;
+    string='';
+    for(var i = 0; i < tmp.length; i++) 
+    { 
+        if(tmp[i] != ' ')
+        {
+            string += tmp[i];
+        }
+    }
+    var hash = 0;
+    if (string.length == 0) return hash;
+    for (var x = 0; x <string.length; x++) 
+    {
+        ch = string.charCodeAt(x);
+            hash = ((hash <<5) - hash) + ch;
+            hash = hash & hash;
+        }
+    return hash;
+}
 
 function fun1(x) 
 {
@@ -59,10 +91,9 @@ function funGraph (ctx,axes,func,color,thick)
 function draw()
 {
     var canvas = document.getElementById("canvas");
-    var excepted = document.getElementById("excepted");
     if (null==canvas || !canvas.getContext) return;
 
-    var axes={}, ctx=canvas.getContext("2d"),ectx=excepted.getContext("2d");
+    var axes={}, ctx=canvas.getContext("2d");
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
     axes.x0 = .5 + .5*canvas.width;  // x0 pixels from left to x=0
     axes.y0 = .5 + .5*canvas.height; // y0 pixels from top to y=0
@@ -71,7 +102,15 @@ function draw()
 
     showAxes(ctx,axes);
     funGraph(ctx,axes,fun1,"rgb(255,64,64)",2);
-    const img = new Image();   // Create new img element
-    img.src = 'file:///1.png';
-    ectx.drawImage(img, 0, 0,ectx.canvas.width,ectx.canvas.height);
+}
+
+function checkHash()
+{
+    setTimeout(()=>{
+    if(Hash(document.getElementById("exprsn").value) == 120)
+    {
+        alert("Хорошая работа, олег!");
+        window.location = Hash(document.getElementById("exprsn").value)+".html";
+    }},
+    200);
 }

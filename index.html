@@ -4,7 +4,7 @@
         <script type="text/javascript" src="script.js"></script>
         <title>Graph Game</title>
     </head>
-    <body onload="draw();draw();">  
+    <body onload="draw();draw();drawExc();">
         <h1 class="label">Попробуй повторить граф!</h1>
         <h1 class="lvl">LVL 1</h1>
         <canvas id="canvas" class="actualGraph"></canvas>
@@ -13,7 +13,7 @@
         <div class="divv">
             <input id="exprsn" class="textbox" placeholder="Введите формулу" value=""/>
             </p>
-            <button class="btn" onclick="draw()">Пуск</button>
+            <button class="btn" onclick="draw();checkHash();">Пуск</button>
         </div>
         <div class="manual">
             <p>
