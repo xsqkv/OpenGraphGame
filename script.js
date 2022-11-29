@@ -28,7 +28,7 @@ function funGraph (ctx,axes,func,color,thick)
     for (var i = iMin;i <= iMax;++i) 
     {
         xx = dx * i;
-        yy = scale * func(xx/scale);
+        yy = scale*.5 * func(xx / scale);
         if(i == iMin) ctx.moveTo(x0 + xx,y0 - yy);
         else ctx.lineTo(x0 + xx,y0 - yy);
     }
@@ -41,10 +41,10 @@ function draw()
     if (null==canvas || !canvas.getContext) return;
 
     var axes={}, ctx=canvas.getContext("2d");
-    ctx.clearRect(0, 0, ctx.width, ctx.height);
+    ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
     axes.x0 = .5 + .5*canvas.width;  // x0 pixels from left to x=0
     axes.y0 = .5 + .5*canvas.height; // y0 pixels from top to y=0
-    axes.scale = 40;                 // 40 pixels from x=0 to x=1
+    axes.scale = 15;                 // 40 pixels from x=0 to x=1
     axes.doNegativeX = true;
 
     showAxes(ctx,axes);

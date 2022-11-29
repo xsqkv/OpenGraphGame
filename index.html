@@ -10,6 +10,11 @@
         <canvas id="canvas" class="actualGraph"></canvas>
         <canvas class="expectedGraph"></canvas>
         <h3 class="ylabel">Y =</h3>
+        <div class="divv">
+            <input id="exprsn" class="textbox" placeholder="Введите формулу" value="x"/>
+            </p>
+            <button class="btn" onclick="draw()">Пуск</button>
+        </div>
         <div class="manual">
             <p>
                 Математические операции: + - / *<br>
@@ -20,11 +25,6 @@
                 Побитовое ИЛИ: |<br>
                 Побитовое ИСКЛЮЧАЮЩЕЕ ИЛИ: ^
             </p>
-        </div>
-        <div class="divv">
-            <input id="exprsn" class="textbox" placeholder="Введите формулу" value="x"/>
-            </p>
-            <button class="btn" onclick="draw()">Пуск</button>
         </div>
     </body>
 </html>
