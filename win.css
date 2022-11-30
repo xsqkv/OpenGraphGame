@@ -1,0 +1,21 @@
+@font-face 
+{
+    font-family: FOND;
+    src: url(undertale_font.ttf);
+}
+body
+{
+    background-color: #1b1917;
+}
+h1
+{
+    font-family: FOND;
+    color: #64ff64;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}

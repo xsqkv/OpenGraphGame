@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="script6.js"></script>
+        <title>Graph Game</title>
+    </head>
+    <body onload="draw();draw();drawExc();">
+        <h1 class="label">Попробуй повторить граф!</h1>
+        <h1 class="lvl">LVL 6</h1>
+        <canvas id="canvas" class="actualGraph"></canvas>
+        <canvas id="excepted" class="expectedGraph"></canvas>
+        <h3 class="ylabel">Y =</h3>
+        <div class="divv">
+            <input id="exprsn" class="textbox" placeholder="Введите формулу" value=""/>
+            </p>
+            <button class="btn" onclick="draw();checkHash();">Пуск</button>
+        </div>
+        <div class="manual">
+            <p>
+                Математические операции: + - / *     <br>
+                Возведение в степень: x**n           <br>
+                Остаток от деления: x%y              <br>
+                Побитовый сдвиг: x<< n,x>>n          <br>
+                Побитовое И: x&y                     <br>
+                Побитовое ИЛИ: x|y                   <br>
+                Побитовое ИСКЛЮЧАЮЩЕЕ ИЛИ: x^y             
+            </p>
+        </div>
+        <div class="manualFunc">
+            <p>
+                Математические функции:<br>
+                abs(x)
+                 acos(x)
+                 acosh(x)<br>
+                asin(x)
+                 asinh(x)
+                 atan(x)<br>
+                atan2(x,n)
+                 atanh(x)
+                 cos(x)<br>
+                cosh(x)
+                 exp(x)
+                 log(x)<br>
+                random(x)
+                 sin(x)
+                 sinh(x)<br>
+                sqrt(x)
+                 tan(x)
+                 tanh(x)
+            </p>
+        </div>
+        <div class="manualConst">
+            <p>
+                Константы:<br>
+                PI<br>
+                E<br>
+            </p>
+        </div>
+    </body>
+</html>
