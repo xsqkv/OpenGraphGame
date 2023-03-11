@@ -5,6 +5,31 @@
         <title>Graph Game</title>
     </head>
     <body onload="draw();draw();drawExc();">
+        <style>
+            .label
+            {
+                font-family: FOND;
+                color: #fff;
+                animation: glow 1s ease-in-out infinite alternate;
+                text-align: center;
+                position: absolute;
+                top: calc(50% - 350px);
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+            @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(64, 128, 32), 0 0 40px rgb(64, 128, 32), 0 0 50px rgb(64, 128, 32), 0 0 60px rgb(64, 128, 32), 0 0 70px rgb(64, 128, 32);
+            }
+            
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px rgb(64, 128, 64), 0 0 40px rgb(64, 128, 64), 0 0 50px rgb(64, 128, 64), 0 0 60px rgb(64, 128, 64), 0 0 70px rgb(64, 128, 64), 0 0 80px rgb(64, 128, 64);
+            }
+        }
+        </style>
         <h1 class="label">Попробуй повторить граф!</h1>
         <h1 class="lvl">LVL 2</h1>
         <canvas id="canvas" class="actualGraph"></canvas>

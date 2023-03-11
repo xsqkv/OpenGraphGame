@@ -4,6 +4,30 @@
         <title>Graph Game</title>
     </head>
     <body>
+        <style>
+            h1
+            {
+                font-family: FOND;
+                color: #fff;
+                text-align: center;
+                animation: glow 1s ease-in-out infinite alternate;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(27, 27, 27), 0 0 40px rgb(27, 27, 27), 0 0 50px rgb(27, 27, 27), 0 0 60px rgb(27, 27, 27), 0 0 70px rgb(27, 27, 27);
+            }
+            
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px rgb(64, 64, 64), 0 0 40px rgb(64, 64, 64), 0 0 50px rgb(64, 64, 64), 0 0 60px rgb(64, 64, 64), 0 0 70px rgb(64, 64, 64), 0 0 80px rgb(64, 64, 64);
+            }
+        }
+        </style>
         <h1>Хорошая работа, ты прошёл 10 уровней из 10!</h1>
     </body>
 </html>

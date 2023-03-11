@@ -5,6 +5,20 @@
         <title>Graph Game</title>
     </head>
     <body onload="draw();draw();drawExc();">
+        <style>
+            .label
+            {
+                font-family: FOND;
+                color: #fff;
+                text-align: center;
+                position: absolute;
+                top: calc(50% - 350px);
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        </style>
         <h1 class="label">Попробуй повторить граф!</h1>
         <h1 class="lvl">LVL 1</h1>
         <canvas id="canvas" class="actualGraph"></canvas>
