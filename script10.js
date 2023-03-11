@@ -111,7 +111,7 @@ function checkHash()
     setTimeout(()=>{
         if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL())
         {
-            alert("Хорошая работа, олег!");
+            alert("Ты хакер??");
             window.location = "-1883740697.html";
         }
     },
