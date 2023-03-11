@@ -24,6 +24,7 @@ const img = new Image();   // Create new img element
 img.src = "img/1.png";
 var ectx;
 var ctx;
+var elem;
 function drawExc()
 {
     ectx = document.getElementById("excepted").getContext("2d");
@@ -85,6 +86,7 @@ function funGraph (ctx,axes,func,color,thick)
         yy = scale*.5 * func(xx / scale);
         if(i == iMin) ctx.moveTo(x0 + xx,y0 - yy);
         else ctx.lineTo(x0 + xx,y0 - yy);
+        elem += xx;
     }
     ctx.stroke();
 }
@@ -108,14 +110,12 @@ function draw()
 
 function checkHash()
 {
-    
     setTimeout(()=>{
-        if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL()) alert("success!");
-    // if(Hash(document.getElementById("exprsn").value) == 120)
-    // {
-        // alert("Хорошая работа, олег!");
-        // window.location = Hash(document.getElementById("exprsn").value)+".html";
-    // }
+        if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL())
+        {
+            alert("Хорошая работа, олег! "+elem);
+            window.location = Hash(document.getElementById("exprsn").value)+".html";
+        }
     },
     500);
 }
