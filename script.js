@@ -21,11 +21,12 @@ var PI = Math.PI;
 var E = Math.E;
 
 const img = new Image();   // Create new img element
-img.src = 'img/1.png';
-
+img.src = "img/1.png";
+var ectx;
+var ctx;
 function drawExc()
 {
-    var ectx = document.getElementById("excepted").getContext("2d");
+    ectx = document.getElementById("excepted").getContext("2d");
     ectx.drawImage(img, 0, 0,ectx.canvas.width,ectx.canvas.height);    
 }
 
@@ -93,7 +94,8 @@ function draw()
     var canvas = document.getElementById("canvas");
     if (null==canvas || !canvas.getContext) return;
 
-    var axes={}, ctx=canvas.getContext("2d");
+    var axes={};
+    ctx=canvas.getContext("2d");
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
     axes.x0 = .5 + .5*canvas.width;  // x0 pixels from left to x=0
     axes.y0 = .5 + .5*canvas.height; // y0 pixels from top to y=0
@@ -106,11 +108,14 @@ function draw()
 
 function checkHash()
 {
+    
     setTimeout(()=>{
-    if(Hash(document.getElementById("exprsn").value) == 120)
-    {
-        alert("Хорошая работа, олег!");
-        window.location = Hash(document.getElementById("exprsn").value)+".html";
-    }},
-    200);
+        if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL()) alert("success!");
+    // if(Hash(document.getElementById("exprsn").value) == 120)
+    // {
+        // alert("Хорошая работа, олег!");
+        // window.location = Hash(document.getElementById("exprsn").value)+".html";
+    // }
+    },
+    500);
 }
