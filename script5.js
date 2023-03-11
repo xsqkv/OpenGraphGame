@@ -111,6 +111,7 @@ function checkHash()
     setTimeout(()=>{
         if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL())
         {
+            
             alert("А я всё думал когда же ты появишься!");
             window.location = "-1566774400.html";
         }

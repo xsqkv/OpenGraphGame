@@ -111,6 +111,7 @@ function checkHash()
     setTimeout(()=>{
         if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL())
         {
+            
             alert("Ты хакер??");
             window.location = "-1883740697.html";
         }

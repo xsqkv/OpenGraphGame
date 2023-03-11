@@ -111,6 +111,7 @@ function checkHash()
     setTimeout(()=>{
         if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL())
         {
+            
             alert("Лучшая работа в мире!");
             window.location = "-881085032.html";
         }

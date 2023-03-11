@@ -111,6 +111,7 @@ function checkHash()
     setTimeout(()=>{
         if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL())
         {
+            
             alert("Winner, winner, chicken dinner!");
             window.location = "3616634.html";
         }
