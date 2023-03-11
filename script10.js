@@ -30,27 +30,7 @@ function drawExc()
     ectx.drawImage(img, 0, 0,ectx.canvas.width,ectx.canvas.height);    
 }
 
-function Hash(string) 
-{
-    var tmp = string;
-    string='';
-    for(var i = 0; i < tmp.length; i++) 
-    { 
-        if(tmp[i] != ' ')
-        {
-            string += tmp[i];
-        }
-    }
-    var hash = 0;
-    if (string.length == 0) return hash;
-    for (var x = 0; x <string.length; x++) 
-    {
-        ch = string.charCodeAt(x);
-            hash = ((hash <<5) - hash) + ch;
-            hash = hash & hash;
-        }
-    return hash;
-}
+
 
 function fun1(x) 
 {
@@ -111,9 +91,8 @@ function checkHash()
     setTimeout(()=>{
         if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL())
         {
-            
             alert("Ты хакер??");
-            window.location = "-1883740697.html";
+            window.location = atob('LTE4ODM3NDA2OTcuaHRtbA==');
         }
     },
     500);
