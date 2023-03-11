@@ -24,7 +24,6 @@ const img = new Image();   // Create new img element
 img.src = "img/1.png";
 var ectx;
 var ctx;
-var elem;
 function drawExc()
 {
     ectx = document.getElementById("excepted").getContext("2d");
@@ -113,8 +112,8 @@ function checkHash()
     setTimeout(()=>{
         if(ctx.canvas.toDataURL() == ectx.canvas.toDataURL())
         {
-            alert("Хорошая работа, олег! "+elem);
-            window.location = Hash(document.getElementById("exprsn").value)+".html";
+            alert("Хорошая работа, олег!");
+            window.location = "120.html";
         }
     },
     500);
