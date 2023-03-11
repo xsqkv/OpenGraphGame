@@ -85,7 +85,6 @@ function funGraph (ctx,axes,func,color,thick)
         yy = scale*.5 * func(xx / scale);
         if(i == iMin) ctx.moveTo(x0 + xx,y0 - yy);
         else ctx.lineTo(x0 + xx,y0 - yy);
-        
     }
     ctx.stroke();
 }
